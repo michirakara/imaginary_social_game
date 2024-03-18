@@ -1,4 +1,4 @@
-window.onload = function() {
+const roll_gacha = () =>{
     const game_list=[
         "ブルー アーカイブ",
         "ウマ 娘",
@@ -15,7 +15,9 @@ window.onload = function() {
         "ガールズバンド パーティ！",
         "ワールド フリッパー",
         "アイドル マスター",
-        "スクールアイドル フェスティバル"
+        "スクールアイドル フェスティバル",
+        "艦隊 これくしょん",
+        "にゃんこ 大戦争"
     ];
     
     var prefix=[];
@@ -37,4 +39,8 @@ window.onload = function() {
 
     var tweet_button=document.getElementById("tweet-button");
     tweet_button.href=`https://twitter.com/intent/tweet?text=${prefix_elem.textContent+suffix_elem.textContent}%0D%0A— 架空のソーシャルゲームジェネレーター&url=https://michirakara.github.io/imaginary_social_game&`
+}
+
+window.onload = function() {
+    roll_gacha();
 }
