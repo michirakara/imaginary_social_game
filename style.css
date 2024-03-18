@@ -11,14 +11,33 @@ body{
     flex-grow: 5;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:end;
 }
 
 p{
-    font-size:xx-large
+    font-size:50px;
+}
+
+#reroll{
+    flex-grow: 4;
+    display:flex;
+    justify-content:center;
+    align-items:start;
+}
+
+#reroll-button{
+    width:60px;
+    height:60px;
+    transform:rotateZ(45deg);
+    transition: 0.2s;
+}
+#reroll-button:hover{
+    cursor: pointer;
+    transform:rotateZ(-90deg);
 }
 
 #tweet{
+    flex-grow:1;
     margin:10px;
     text-align:center;
 }
