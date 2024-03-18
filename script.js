@@ -21,7 +21,10 @@ window.onload = function() {
         prefix.push(front);
         suffix.push(back);
     }
+    const prefix_index=Math.floor(Math.random()*game_list.length);
+    var suffix_index=Math.floor(Math.random()*(game_list.length-1));
+    if(suffix_index>=prefix_index)suffix_index++;
     
-    document.getElementById("prefix").textContent=prefix[Math.floor(Math.random()*game_list.length)];
-    document.getElementById("suffix").textContent=suffix[Math.floor(Math.random()*game_list.length)];
+    document.getElementById("prefix").textContent=prefix[prefix_index];
+    document.getElementById("suffix").textContent=suffix[suffix_index];
 }
