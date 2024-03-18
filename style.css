@@ -1,10 +1,14 @@
 html{
     height: 100%;
 }
-
 body{
-    margin:0;
-    min-height:100%;
+    margin: 0;
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+}
+#show-result{
+    flex-grow: 5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,4 +16,9 @@ body{
 
 p{
     font-size:xx-large
+}
+
+#tweet{
+    margin:10px;
+    text-align:center;
 }

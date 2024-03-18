@@ -24,7 +24,12 @@ window.onload = function() {
     const prefix_index=Math.floor(Math.random()*game_list.length);
     var suffix_index=Math.floor(Math.random()*(game_list.length-1));
     if(suffix_index>=prefix_index)suffix_index++;
-    
-    document.getElementById("prefix").textContent=prefix[prefix_index];
-    document.getElementById("suffix").textContent=suffix[suffix_index];
+
+    var prefix_elem=document.getElementById("prefix")
+    var suffix_elem=document.getElementById("suffix")
+    prefix_elem.textContent=prefix[prefix_index];
+    suffix_elem.textContent=suffix[suffix_index];
+
+    var tweet_button=document.getElementById("tweet-button");
+    tweet_button.href=`https://twitter.com/intent/tweet?text=${prefix_elem.textContent+suffix_elem.textContent}%0D%0A— 架空のソーシャルゲームジェネレーター&url=https://michirakara.github.io/imaginary_social_game&`
 }
